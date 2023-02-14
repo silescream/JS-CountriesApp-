@@ -1,0 +1,182 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+@mixin darkmodebc {
+    background-color: #332940;
+    color: white;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Nunito', sans-serif;
+}
+
+.header {
+    margin: 120px auto 35px auto;
+    max-width: 1240px;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        padding-left: 50px;
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+    &__color-mode {
+        display: flex;
+        padding-right: 50px;
+    }
+
+    &__icon {
+        width: 17px;
+        height: 17px;
+        margin-right: 5px;
+    }
+
+    &__mode-name {
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    background-color: white;
+
+    &__search {
+        display: flex;
+        width: 350px;
+        height: 35px;
+        background-color: white;
+        align-items: center;
+    }
+
+    &__search-icon {
+        border: none;
+        background-color: white;
+        
+        margin: 0 10px;
+        cursor: pointer;
+        img {
+        width: 15px;
+        height: 15px;
+        }
+    }
+
+    &__search-input {
+        width: 60%;
+        border: none;
+        outline: none;
+    }
+
+    &__error {
+        color: red;
+        font-size: 12px;
+        display:none;
+    }
+    &__filter-list {
+        height: 35px;
+        width: 150px;
+        padding: 0 25px;
+        outline: 0;
+        border: none;
+        cursor: pointer;
+    }
+    
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+    &__card {
+        width: 200px;
+        height: 300px;
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 45px;
+        border: none;
+        
+        
+    }
+    &__flag {
+        width: 100%;
+        height: 125px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-bottom: 15px;
+        border: 1px solid whitesmoke;
+    }
+
+    &__text {
+        padding: 0 0 15px 10px;
+        font-size: 12px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+}
+
+.dark {
+
+    background-color: #1F1B24;
+
+    .header {
+        @include darkmodebc;
+    }
+
+    .nav {
+        @include darkmodebc;
+
+        &__search {
+            @include darkmodebc;
+        }
+
+        &__search-input {
+            @include darkmodebc;
+        }
+
+        &__search-icon {
+            @include darkmodebc;
+        }
+
+        &__filter-list {
+            @include darkmodebc;
+        }
+    }
+
+    .content {
+
+        &__flag {
+            border: none;
+        }
+        &__card {
+            @include darkmodebc;
+        }
+    }
+}

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Nunito", sans-serif;
+}
+
+.header {
+  margin: 120px auto 35px auto;
+  max-width: 1240px;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title {
+  padding-left: 50px;
+  font-size: 23px;
+  font-weight: 700;
+}
+.header__color-mode {
+  display: flex;
+  padding-right: 50px;
+}
+.header__icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+}
+.header__mode-name {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  background-color: white;
+}
+.nav__search {
+  display: flex;
+  width: 350px;
+  height: 35px;
+  background-color: white;
+  align-items: center;
+}
+.nav__search-icon {
+  border: none;
+  background-color: white;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.nav__search-icon img {
+  width: 15px;
+  height: 15px;
+}
+.nav__search-input {
+  width: 60%;
+  border: none;
+  outline: none;
+}
+.nav__error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.nav__filter-list {
+  height: 35px;
+  width: 150px;
+  padding: 0 25px;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.content__card {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 45px;
+  border: none;
+}
+.content__flag {
+  width: 100%;
+  height: 125px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid whitesmoke;
+}
+.content__text {
+  padding: 0 0 15px 10px;
+  font-size: 12px;
+}
+.content__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.dark {
+  background-color: #1F1B24;
+}
+.dark .header {
+  background-color: #332940;
+  color: white;
+}
+.dark .nav {
+  background-color: #332940;
+  color: white;
+}
+.dark .nav__search {
+  background-color: #332940;
+  color: white;
+}
+.dark .nav__search-input {
+  background-color: #332940;
+  color: white;
+}
+.dark .nav__search-icon {
+  background-color: #332940;
+  color: white;
+}
+.dark .nav__filter-list {
+  background-color: #332940;
+  color: white;
+}
+.dark .content__flag {
+  border: none;
+}
+.dark .content__card {
+  background-color: #332940;
+  color: white;
+}
